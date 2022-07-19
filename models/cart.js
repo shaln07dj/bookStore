@@ -17,7 +17,7 @@ module.exports = class Cart {
             }
    
         //Analyze the cart => Find exiting product
-        const exitingProductIndex =cart.products.findindex( prod => prod.id ===id);
+        const exitingProductIndex =cart.products.findIndex( prod => prod.id ===id);
         const exitingProduct = cart.products[exitingProductIndex]
         let updatedProduct;
         if (exitingProduct) {
