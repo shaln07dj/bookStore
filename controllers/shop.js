@@ -16,7 +16,7 @@ exports.getProduct = (req, res, next) => {
    res.render('shop/product-detail', {
     product:product,
     pageTitle:product.title,
-  path:'/products'
+    path:'/products'
 })
   });
 
@@ -40,13 +40,13 @@ exports.getCart = (req, res, next) => {
   });
 };
 
-exports.postCart = ( req, res,next) => {
-  const prodId=req.body.productId;
-  Product.findById(prodId,(product) =>{
-    Cart.addProduct(prodId,product.price)
+exports.postCart = (req, res, next) => {
+  const prodId = req.body.productId;
+  Product.findById(prodId, product => {
+    Cart.addProduct(prodId, product.price);
   });
   res.redirect('/cart');
-}
+};
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', {
     path: '/orders',
