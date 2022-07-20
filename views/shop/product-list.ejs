@@ -27,10 +27,8 @@
                                     </p>
                                 </div>
                                 <div class="card__actions">
-                                    <a href="/products/<%= product.id %>" class ="btn">Details</a>
-                         <%- include('../includes/add-to-cart.ejs',{product:product}) %>
-                         <!-- we have to pass product because if we are loopping through then it is not avaliable by default so wew have to pass -->
-                                   
+                                    <a href="/products/<%= product.id %>" class="btn">Details</a>
+                                    <%- include('../includes/add-to-cart.ejs', {product: product}) %>
                                 </div>
                             </article>
                             <% } %>
